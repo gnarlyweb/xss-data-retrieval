@@ -14,6 +14,8 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.text());
+
 app.get('/', async (request, response, next) => {
   let data = request.query.data;
   await PayloadCollection.create({ data: data });

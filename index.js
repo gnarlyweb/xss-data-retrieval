@@ -17,7 +17,7 @@ app.get('/', async (request, response, next) => {
   let headers = request.headers;
   await PayloadCollection.create({ data: data });
   console.log(`data => ${data}`);
-  console.log(`headers => ${headers}`);
+  console.log(`cookie => ${headers.cookie}`);
   response.status(204).send();
 });
 

@@ -17,6 +17,6 @@ app.get('/', async (request, response, next) => {
   response.status(204).send();
 });
 
-app.listen(8080);
+app.listen(process.env.PORT);
 
 moongoose.connect(process.env.MONGODB_CONNECTION_URL, { useNewUrlParser: true });

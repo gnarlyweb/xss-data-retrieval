@@ -19,8 +19,11 @@ app.get('/', async (request, response, next) => {
   response.status(204).send();
 });
 
-app.use(cors());
-
+app.all('/*', function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 app.listen(process.env.PORT);
 
 moongoose.connect(process.env.MONGODB_CONNECTION_URL, { useNewUrlParser: true });

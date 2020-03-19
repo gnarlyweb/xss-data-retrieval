@@ -14,7 +14,8 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.text());
+app.use(express.text({ limit: '50mb', extended: true }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 app.get('/', async (request, response, next) => {
   let data = request.query.data;

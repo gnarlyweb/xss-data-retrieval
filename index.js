@@ -2,6 +2,8 @@ const express = require('express');
 
 const moongoose = require('mongoose');
 
+const cors = require('cors');
+
 const Payload = moongoose.Schema({
   data: String
 });
@@ -16,6 +18,8 @@ app.get('/', async (request, response, next) => {
   console.log(`data => ${data}`);
   response.status(204).send();
 });
+
+app.use(cors());
 
 app.listen(process.env.PORT);
 

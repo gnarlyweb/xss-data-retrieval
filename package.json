@@ -4,6 +4,7 @@
   "description": "HTTP Server that produces a service data uploading. Intentional for uploading XSS data on a database",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

@@ -1,0 +1,19 @@
+{
+  "name": "xss-data-retrieval",
+  "version": "1.0.0",
+  "description": "HTTP Server that produces a service data uploading. Intentional for uploading XSS data on a database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freitzzz/xss-data-retrieval.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freitzzz/xss-data-retrieval/issues"
+  },
+  "homepage": "https://github.com/freitzzz/xss-data-retrieval#readme"
+}

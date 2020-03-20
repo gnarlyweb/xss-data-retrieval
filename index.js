@@ -4,11 +4,11 @@ const cors = require('cors');
 
 const moongoose = require('mongoose');
 
-const Payload = moongoose.Schema({
+const Data = moongoose.Schema({
   data: String
 });
 
-const PayloadCollection = moongoose.model('Payload', Payload);
+const Collection = moongoose.model('Data', Data);
 
 const app = express();
 
@@ -19,14 +19,14 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 app.get('/', async (request, response, next) => {
   let data = request.query.data;
-  await PayloadCollection.create({ data: data });
+  await Collection.create({ data: data });
   console.log(`data => ${data}`);
   response.status(204).send();
 });
 
 app.post('/', async (request, response, next) => {
   let data = request.body;
-  await PayloadCollection.create({ data: data });
+  await Collection.create({ data: data });
   console.log(`data => ${data}`);
   response.status(204).send();
 });

